@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Compra productos de calidad al mejor precio. Descubre ofertas exclusivas y una experiencia de compra increíble.">
+        <meta name="keywords" content="tienda online, productos, ofertas, comprar, tecnología">
+        <title>Tienda Online | Ofertas Increíbles</title>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        
+    </head>
+    <body>
+        <!-- Barra de navegación -->
+        <div class="navbar">
+            <div class="logo">techzonrd</div>
+            <div>
+                <a href="index.html">Inicio</a>
+                <a href="oferta.html">Ofertas</a>
+                
+            </div>
+        </div>
+
+        <!-- Barra de búsqueda con sugerencias -->
+        <div class="search-bar">
+            <form action="redireccionar.html" method="get" id="searchForm">
+                <input 
+                    list="productos" 
+                    name="producto" 
+                    id="producto" 
+                    placeholder="Buscar productos..." 
+                    required>
+                <datalist id="productos">
+                    <option value="Audífono"></option>
+                    
+                </datalist>
+                <button type="submit">Buscar</button>
+            </form>
+        </div>
+
+        <!-- Banner con video -->
+        <div class="banner">
+            <video autoplay muted loop>
+                <source src="BANNER.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de videos.
+            </video>
+            <div class="banner-text">
+                
+            </div>
+        </div>
+
+        <!-- Sección de productos -->
+        <section class="products-section">
+            <h2 class="products-title">Productos Destacados</h2>
+            <div class="products-grid">
+                <!-- Producto 1 -->
+                <div class="product-card">
+                    <img src="hol.jpeg" alt="Producto 1">
+                    <div class="product-info">
+                        <p class="product-title">Auriculares Inalámbricos</p>
+                        <p class="product-price">$1,200</p>
+                        <a href="18294379911" class="buy-button">Comprar ahora</a>
+                    </div>
+                </div>
+                <!-- Producto 2 -->
+                <div class="product-card">
+                    <img src="5,3.jpeg" alt="Producto 2">
+                    <div class="product-info">
+                        <p class="product-title">Reloj Inteligente</p>
+                        <p class="product-price">$900</p>
+                        <a href="#" class="buy-button">Comprar ahora</a>
+                    </div>
+                </div>
+                <!-- Producto 3 -->
+                <div class="product-card">
+                    <img src="3.jpeg" alt="Producto 3">
+                    <div class="product-info">
+                        <p class="product-title">Altavoz Bluetooth</p>
+                        <p class="product-price">$700</p>
+                        <a href="#" class="buy-button">Comprar ahora</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pie de página -->
+        <footer class="footer">
+            &copy; 2024 Techzonrd. Todos los derechos reservados.
+        </footer>
+        <script src="redirect.js"></script>
+    </body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados de Búsqueda</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+
+        /* Barra de navegación */
+        .navbar {
+            background-color: #232f3e;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            margin: 0 15px;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        .navbar .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        /* Video banner */
+        .banner {
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+        }
+
+        .banner video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .banner-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Barra de búsqueda */
+        .search-bar {
+            margin: 20px auto;
+            width: 80%;
+            max-width: 600px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .search-bar input {
+            flex: 1;
+            padding: 12px;
+            border-radius: 25px 0 0 25px;
+            border: 1px solid #ddd;
+            font-size: 1rem;
+        }
+
+        .search-bar button {
+            padding: 12px 20px;
+            background-color: #febd69;
+            border: none;
+            border-radius: 0 25px 25px 0;
+            color: #333;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .search-bar button:hover {
+            background-color: #ffa940;
+        }
+
+        /* Productos */
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .product {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .product:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .product img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .product h3 {
+            font-size: 1.4rem;
+            color: #333;
+            margin: 10px 0;
+        }
+
+        .product .price {
+            color: #b12704;
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin: 10px 0;
+        }
+
+        .product .buy-button {
+            background-color: #febd69;
+            color: #333;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .product .buy-button:hover {
+            background-color: #ffa940;
+        }
+
+        .offer-tag {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #b12704;
+            color: white;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 1rem;
+            z-index: 5;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Barra de navegación -->
+    <div class="navbar">
+        <div class="logo">MiTienda</div>
+        <div>
+            <a href="endex.html">Inicio</a>
+            <a href="oferta.html">Ofertas</a>
+            <a href="#">Categorías</a>
+            <a href="#">Ayuda</a>
+        </div>
+    </div>
+
+    <!-- Video Banner -->
+    <div class="banner">
+        <video autoplay muted loop>
+            <source src="BANNER.mp4" type="video/mp4">
+            Tu navegador no soporta videos.
+        </video>
+        
+    </div>
+
+    <!-- Barra de búsqueda -->
+    <div class="search-bar">
+        <input type="text" placeholder="Buscar productos...">
+        <button>Buscar</button>
+    </div>
+
+    <!-- Productos -->
+    <div class="products">
+        <div class="product">
+            <div class="offer-tag">OFERTA</div>
+            <img src="hol.jpeg" alt="Producto 1">
+            <h3>Auriculares Inalámbricos</h3>
+            <p class="price">$1,100</p>
+            <button class="buy-button">Comprar</button>
+        </div>
+        <div class="product">
+            <div class="offer-tag">OFERTA</div>
+            <img src="5,3.jpeg" alt="Producto 2">
+            <h3>Audífonos S20</h3>
+            <p class="price">$850</p>
+            <button class="buy-button">Comprar</button>
+        </div>
+        <div class="product">
+            <img src="3.jpeg" alt="Producto 3">
+            <h3>Smart Watch Pro</h3>
+            <p class="price">$2,500</p>
+            <button class="buy-button">Comprar</button>
+        </div>
+    </div>
+
+</body>
+</html>
